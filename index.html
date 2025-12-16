@@ -1,1 +1,164 @@
-hello twin
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Julkort</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+      function draw() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+
+
+          ctx.fillStyle = "rgb(120, 0, 0)";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ctx.font = "90px serif"; ctx.fillStyle = "black"; ctx.fillText("^ ^", 60, 100);
+ctx.save(); 
+ctx.translate(96, 90);
+
+ctx.rotate(Math.PI / 2);
+
+ctx.font = "60px serif";
+ctx.fillStyle = "black";
+ctx.fillText(")", 0, 0); 
+ctx.restore(); 
+
+  // Ljusstake 1
+ctx.fillStyle = "silver"; 
+ctx.fillRect(45, 350, 20, 60);
+
+
+ctx.beginPath();
+ctx.arc(55, 350, 10, 2, Math.PI * 2); 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(55, 410, 10, 2, Math.PI * 2); 
+ctx.fill();
+
+
+ctx.fillStyle = "white";
+ctx.fillRect(52, 310, 6, 40);
+
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(55, 305, 5, 0, Math.PI * 2);
+ctx.fill();
+
+
+// Ljusstake 2
+ctx.fillStyle = "silver"; 
+ctx.fillRect(95, 350, 20, 60); 
+
+ctx.beginPath();
+ctx.arc(105, 350, 10, 2, Math.PI * 2); 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(105, 410, 10, 2, Math.PI * 2); 
+ctx.fill();
+
+
+ctx.fillStyle = "white";
+ctx.fillRect(102.5, 310, 6, 40);
+
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(105, 305, 5, 0, Math.PI * 2);
+ctx.fill();
+        
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.moveTo(300, 160); // julstjärna
+
+ctx.lineTo(305, 175);
+ctx.lineTo(320, 175);
+ctx.lineTo(308, 185);
+ctx.lineTo(312, 200);
+ctx.lineTo(300, 190);
+ctx.lineTo(288, 200);
+ctx.lineTo(292, 185);
+ctx.lineTo(280, 175);
+ctx.lineTo(295, 175);
+
+ctx.closePath();
+ctx.fill();
+
+         ctx.fillStyle = "green";
+        ctx.beginPath();
+        ctx.moveTo(300, 190);
+        ctx.lineTo(270, 250);
+        ctx.lineTo(330, 250);
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.moveTo(300, 220);
+        ctx.lineTo(260, 300);
+        ctx.lineTo(340, 300);
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.moveTo(300, 258);
+        ctx.lineTo(250, 360);
+        ctx.lineTo(350, 360);
+        ctx.fill();
+
+         // Paket 1
+          ctx.fillStyle = "green";
+          ctx.fillRect(370, 360, 80, 60); 
+          ctx.fillStyle = "red"
+          ctx.fillRect(405, 360, 10, 60); 
+          ctx.fillRect(370, 390, 80, 10); 
+          
+          // paket 2
+       ctx.fillStyle = "cyan";
+        ctx.fillRect(150, 360, 80, 60); 
+        ctx.fillStyle = "blue";
+        ctx.fillRect(185, 360, 10, 60);
+        ctx.fillRect(150, 390, 80, 10);
+
+        ctx.fillStyle = "saddlebrown";
+        ctx.fillRect(290, 360, 20, 60);
+  
+
+        // Paket 3 (ovanpå paket 2)
+        ctx.fillStyle = "white";
+        ctx.fillRect(380, 310, 60, 49.80); 
+        ctx.fillStyle = "grey";
+        ctx.fillRect(408, 310, 9, 49.80); 
+        ctx.fillRect(380, 330, 60, 8); 
+
+
+        ctx.fillStyle = "rgb(101, 67, 33)"; // mörkbrun
+        ctx.fillRect(0, 420, canvas.width, 80); // golv
+        
+          ctx.fillStyle = "black";
+         ctx.fillRect(22, 411, 110, 10);
+
+         
+          ctx.font = "22px serif";
+          ctx.fillStyle = "black"; 
+          ctx.fillText("God Jul Käre Vänner, Klasskamrater och Lärare!", 30, 480);
+        }
+      }
+      draw();
+    </script>
+
+    
+  </body>
+</html>
